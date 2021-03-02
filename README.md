@@ -1,15 +1,15 @@
 # emd_data_generator_blender
 
-A simple system for generating cloth manipulation data using Blender.
+A simple system for generating cloth manipulation data using Blender.\
 Coded by Solvi Arnold and used for data generation in the following publications:
 
-[1] Solvi Arnold and Kimitoshi Yamazaki, "Fast and Flexible Multi-Step Cloth Manipulation Planning Using an Encode-Manipulate-Decode Network (EM*D Net)", Frontiers in Neurorobotics, vol. 13, 2019, doi:10.3389/fnbot.2019.00022.  
+[1] Solvi Arnold and Kimitoshi Yamazaki, "Fast and Flexible Multi-Step Cloth Manipulation Planning Using an Encode-Manipulate-Decode Network (EM*D Net)", Frontiers in Neurorobotics, vol. 13, 2019, doi:10.3389/fnbot.2019.00022.\
 https://www.frontiersin.org/articles/10.3389/fnbot.2019.00022/full
 
-[2] Daisuke Tanaka, Solvi Arnold and Kimitoshi Yamazaki, "EMD Net: An Encode–Manipulate–Decode Network for Cloth Manipulation", IEEE Robotics and Automation Letters, vol. 3, no. 3, pp. 1771-1778, July 2018, doi:10.1109/LRA.2018.2800122.  
+[2] Daisuke Tanaka, Solvi Arnold and Kimitoshi Yamazaki, "EMD Net: An Encode–Manipulate–Decode Network for Cloth Manipulation", IEEE Robotics and Automation Letters, vol. 3, no. 3, pp. 1771-1778, July 2018, doi:10.1109/LRA.2018.2800122.\
 https://ieeexplore.ieee.org/document/8276243
 
-The code was revised to work with more recent Blender versions.
+The code was revised to work with more recent Blender versions.\
 Tested with Blender version 2.91.2.
 
 

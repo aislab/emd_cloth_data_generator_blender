@@ -28,10 +28,10 @@ The system generates single- and dual-handed cloth manipulation examples on a sq
 3) In the Manipulation tab, set the "Base path" field to a work directory containing "init.pickle". Data will be generated to sub-directories of this work directory. The "init.pickle" file contains the initial cloth shape from which all manipulation sequences will start (by default this state has the cloth fully spread out with its axes aligned with the axes of the workspace).
 4) In the "Data dir" field, enter a name for the directory to store generated data to. Data files will be stored to base_path/data_dir.
 5) In the "Data generation" section of the Manipulation tab, find the following settings:
-- Sequence length: The sequence length for a single example (i.e. the number of manipulations per manipulation sequence).
-- Number of Files: The total number of data files to generate.
-- Examples per file: The number of examples in each individual file (generally 1 is fine here).
-- Name base: Generated files are named as name_base000000.npz. Can be useful to e.g. differentiate files when performing data generation in parallel with multiple Blender instances.
+  - Sequence length: The sequence length for a single example (i.e. the number of manipulations per manipulation sequence).
+  - Number of Files: The total number of data files to generate.
+  - Examples per file: The number of examples in each individual file (generally 1 is fine here).
+  - Name base: Generated files are named as name_base000000.npz. Can be useful to e.g. differentiate files when performing data generation in parallel with multiple Blender instances.
 6) Press "Generate data" to start the data generation process.
 7) Check the terminal output. Errors and problems are reported here, as well as the progress of the data generation process. Data generation can take a lot of time, and the Blender GUI will give no indication of data generation being started or in progress (manipulations being performed are not visualised in the GUI). The GUI will be unresponsive while data is being generated. In our experience Blender's cloth simulation is not 100% stable. Check the progress of the data generation process every once in a while and terminate/resume as necessary.
 

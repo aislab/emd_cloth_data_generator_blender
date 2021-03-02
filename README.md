@@ -25,8 +25,8 @@ The system generates single- and dual-handed cloth manipulation examples on a sq
 ### [A. Data generation]
 
 1. Ensure you can see Blender's terminal output (e.g. by launching Blender from a terminal).
-2. Open the scene "cloth_manipulation.blend". You should see a square turqoise cloth on a square grey work surface.
-3. From Blender's text file editor, open manipulation_addon.py and run it (▶ button). This should produce a "Manipulation" tab on the main view.
+2. Open the scene "cloth_manipulation_scene.blend". You should see a square turqoise cloth on a square grey work surface.
+3. From Blender's text file editor, open cloth_manipulation_addon.py and run it (▶ button). This should produce a "Manipulation" tab on the main view.
 4. In the Manipulation tab, set the "Base path" field to a work directory containing "init.pickle". Data will be generated to sub-directories of this work directory. The "init.pickle" file contains the initial cloth shape from which all manipulation sequences will start (by default this state has the cloth fully spread out with its axes aligned with the axes of the workspace).
 5. In the "Data dir" field, enter a name for the directory to store generated data to. Data files will be stored to base_path/data_dir.
 6. In the "Data generation" section of the Manipulation tab, find the following settings:

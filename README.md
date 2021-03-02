@@ -33,7 +33,7 @@ The system generates single- and dual-handed cloth manipulation examples on a sq
    - Sequence length: The sequence length for a single example (i.e. the number of manipulations per manipulation sequence).
    - Number of Files: The total number of data files to generate.
    - Examples per file: The number of examples in each individual file (generally 1 is fine here).
-   - Name base: Generated files are named as name_base000000.npz. Can be useful to e.g. differentiate files when performing data generation in parallel with multiple Blender instances.
+   - Name base: Generated files are named as name_base000000.npz. This can be useful to e.g. differentiate files when performing data generation in parallel with multiple Blender instances.
 7. Press "Generate data" to start the data generation process.
 8. Check the terminal output. Errors and problems are reported here, as well as the progress of the data generation process. Data generation can take a lot of time, and the Blender GUI will give no indication of data generation being started or in progress (manipulations being performed are not visualised in the GUI). The GUI will be unresponsive while data is being generated. In our experience Blender's cloth simulation is not 100% stable. Check the progress of the data generation process every once in a while and terminate/resume as necessary.
 

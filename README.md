@@ -1,4 +1,4 @@
-# emd_data_generator_blender
+# emd_cloth_data_generator_blender
 
 A simple system for generating cloth manipulation data using Blender.\
 Coded by Solvi Arnold and used for data generation in the following publications:

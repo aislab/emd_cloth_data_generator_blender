@@ -323,7 +323,7 @@ class RotateCloth(bpy.types.Operator):
     def invoke(self, context, event):
         cloth = bpy.data.objects['cloth']
         ms,meshes,vtx_picks,co_picks,moves = load_state(cloth)
-        mesh = convert_to_np(cloth.to_mesh())#scene = bpy.context.scene, apply_modifiers = True, settings = 'RENDER'))
+        mesh = convert_to_np(cloth.evaluated_get(context.evaluated_depsgraph_get()).to_mesh())
         angles = np.arctan2(mesh[:,1],mesh[:,0])
         hypots = np.hypot(mesh[:,1],mesh[:,0])
         angles += np.deg2rad(context.scene.user_specified_rotation)
@@ -535,6 +535,7 @@ class ClothManipulationStep(bpy.types.Operator):
                     p = -np.cos(f*arc)
                     x = pivot[0]+p*move[0]/2
                     y = pivot[1]+p*move[1]/2
+                    #print(i, 'xyz',(x,y,z))
                     hand.location = (x,y,z)
                     hand.keyframe_insert(data_path="location",frame=frame_num)
                     frame_num += 1
@@ -592,7 +593,8 @@ class ClothManipulationStep(bpy.types.Operator):
             print('manipulation time:', time.time()-t_start)
                 
             # make snapshot of resulting mesh
-            result_mesh = convert_to_np(cloth.to_mesh())
+            result_mesh = convert_to_np(cloth.evaluated_get(context.evaluated_depsgraph_get()).to_mesh())
+            print('result_mesh:', result_mesh.shape, result_mesh.min(), result_mesh.max())
         
         if meshes.shape[0] <= ms+1:
             print('concatenating result mesh')
